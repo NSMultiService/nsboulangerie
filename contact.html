@@ -1,0 +1,181 @@
+<!DOCTYPE htmll>
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NS Boulangerie - Découvrez nos pains artisanaux, viennoiseries et pâtisseries fabriqués avec passion.">
+    <meta name="keywords" content="boulangerie, pain artisanal, pâtisseries, viennoiseries, NS Boulangerie">
+    <meta name="author" content="NS Boulangerie">
+    <title>boulangerie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <header >
+        <!--HEADER-->
+        <button class="menu-toggle" id="menu-toggle">
+            ☰ <!-- Icône de menu hamburger -->
+        </button>
+
+
+        <div class="nav-bar" id="nav-bar">
+            <div class="navigation-logo">
+                <h1>NS.BOULANGRIE</h1>
+            </div>
+            <div class="navigation-menu" id="navigation-menu">
+                <ul class="menu">
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/produits.html">Produits</a></li>
+                    <li><a href="/galerie.html">Galerie</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/avis.html">Avis Clients</a></li>
+                </ul>
+            </div>
+            <div id="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div class="navigation-button">
+                <button onclick="window.location.href='produits.html'">Commandez maintenant</button>
+            </div>
+        </div>
+        <section class="products-container">
+            <div id="cart-modal">
+                <h2>Votre Panier</h2>
+                <div id="cart-items"></div>
+                <button id="pay-button">Payer</button>
+                <button id="close-cart">Fermer</button>
+            </div>
+        
+        </section>
+
+        <div class="divider"></div>
+    </header>
+   
+
+   
+<!-- Page de contact
+ 
+
+<header>
+    <h1>Contactez NSM Boulangerie</h1>
+</header>
+
+
+
+<section id="contact" class="contact-container">
+    <form action="#" method="POST">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+        <button type="reset">Annuler</button>
+    </form>
+</section>
+-->
+
+
+<div class="contact-container">
+
+    <form action="https://formspree.io/f/xqaajzgj" method="POST">
+        <input type="text" name="_gotcha" style="display:none">
+        <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="10" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Envoyer</button>
+        <button type="reset" class="btn-reset">Annuler</button>
+    </form>
+
+</div>
+
+
+
+<script>
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Empêcher le rechargement de la page
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+        };
+
+        try {
+            const response = await fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert('Votre message a été envoyé avec succès !');
+                form.reset(); // Réinitialiser le formulaire
+            } else {
+                alert('Une erreur est survenue. Veuillez réessayer.');
+            }
+        } catch (error) {
+            alert('Une erreur s\'est produite : ' + error.message);
+        }
+    });
+</script>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact-form">
+                <div class="form-title">
+
+                    <h3>Contactez-nous</h3>
+                </div>
+               
+            </div>
+
+            <div class="contact-info">
+                <div class="info-box">
+                    <h4>Téléphone</h4>
+                    <p>+509 40317399</p>
+                </div>
+                <div class="info-box">
+                    <h4>Email</h4>
+                    <p>wilnaderjean78@gmail.com</p>
+                </div>
+                <div class="info-box">
+                    <h4>Adresse</h4>
+                    <p>123 Ruelle D'Espoir, Anse-Á-Galets, Haïti</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>
+                &copy; 2024 Boulangerie Artisanale NSM. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+<script src="/script.js"></script>
+</body>
+
+</htmll>

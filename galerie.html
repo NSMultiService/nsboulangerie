@@ -1,0 +1,201 @@
+<!DOCTYPE htmll>
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NS Boulangerie - Découvrez nos pains artisanaux, viennoiseries et pâtisseries fabriqués avec passion.">
+    <meta name="keywords" content="boulangerie, pain artisanal, pâtisseries, viennoiseries, NS Boulangerie">
+    <meta name="author" content="NS Boulangerie">
+    <title>boulangerie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <header >
+        <!--HEADER-->
+        <button class="menu-toggle" id="menu-toggle">
+            ☰ <!-- Icône de menu hamburger -->
+        </button>
+
+
+        <div class="nav-bar" id="nav-bar">
+            <div class="navigation-logo">
+                <h1>NS.BOULANGRIE</h1>
+            </div>
+            <div class="navigation-menu" id="navigation-menu">
+                <ul class="menu">
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/produits.html">Produits</a></li>
+                    <li><a href="/galerie.html">Galerie</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/avis.html">Avis Clients</a></li>
+                </ul>
+            </div>
+            <div id="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div class="navigation-button">
+                <button onclick="window.location.href='produits.html'">Commandez maintenant</button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+    </header>
+    <main>
+
+        <div class="section-nav-service">
+            <h2>Le Pain, Notre Passion</h2>
+            <p>Découvrez l'art de la boulangerie artisanale avec des produits frais,
+                savoureux et faits avec amour. Votre palais nous remerciera !</p>
+        </div>
+
+    </main>
+    <section class="products-container">
+        <div id="cart-modal">
+            <h2>Votre Panier</h2>
+            <div id="cart-items"></div>
+            <button id="pay-button">Payer</button>
+            <button id="close-cart">Fermer</button>
+        </div>
+    
+    </section>
+
+    <div class="galerie-title">
+        <h1>Bienvenue à la galerie NSM Boulangerie</h1>
+    </div>
+    <section id="galerie" class="gallery-container">
+
+        <div  class="gallery-item"><img src="/assets/images/Art1.png" alt="Pain artisanal">
+            <div class="content">
+                <h3>Un accueil chaleureux en boulangerie</h3>
+                <p>Découvrez notre espace convivial où l'odeur du pain frais règne en maître.</p>
+            </div>
+        </div>
+        <div class="gallery-item"><img src="/assets/images/Art2.png" alt="Croissants dorés">
+            <div class="content">
+                <h3>L'art de la cuisine au four traditionel</h3>
+                <p>Regardez nos artisans donner vie à chaque pain avec passion et savoir-faire</p>
+            </div>
+        </div>
+        <div class="gallery-item"><img src="/assets/images/Art4.png" alt="Baguettes croustillantes">
+            <div class="content">
+                <h3>Production en série, mais toujours artisanale</h3>
+                <p>Des pains dorés et croustillants, préparés pour satisfaire toutes vos envies</p>
+            </div>
+        </div>
+        <div class="gallery-item"><img src="/assets/images/Art5.jpeg" alt="Viennoiseries variées">
+            <div class="content">
+                <h3>le coin des pains dorés</h3>
+                <p>Savourez la perfection de nos pains croustillants a l'extérieur et moelleux à l'intérieur</p>
+            </div>
+        </div>
+       
+        <div class="gallery-item"><img src="/assets/images/art6.jpg" alt="Pain artisanal">
+            <div class="content">
+                <h3>Maître pâtisserie en action</h3>
+                <p>Chaque création est faite avec amour pour ravir vos papilles</p>
+            </div>
+        </div>
+        <div class="gallery-item"><img src="/assets/images/Art7.jpg" alt="Croissants dorés">
+            <div class="content">
+                <h3>Ambiance artisanale et gourmande</h3>
+                <p>Prolongez dans un univers où chaque produit raconte une histoire de tradition.</p>
+            </div>
+        </div>
+        <div class="gallery-item"><img src="/assets/images/Art3.png" alt="Baguettes croustillantes">
+            <div class="content">
+                <h3>Viennoiseries dorées et irrésistible</h3>
+                <p>découvrez nos croissants et pains au chocolat fraîchment sortis du four.</p>
+            </div>
+        </div>
+        <div class="gallery-item"><img src="/assets/images/Art9.jpeg" alt="Viennoiseries variées">
+            <div class="content">
+                <h3>Un goût de perfection à chaque bouchée</h3>
+                <p>Notre sélection variée de pâtisseries vous attent pour un moment de plaisir.</p>
+            </div>
+        </div>
+    
+        <div class="gallery-item"><img src="/assets/images/Art10.jpeg" alt="Pain artisanal">
+            <div class="content">
+                <h3>Les formes originales de nos pains spéciaux
+                </h3>
+                <p>Du bretzel au pain classique, découvrez des saveurs uniques.
+                </p>
+            </div>
+        </div>
+        <div class="gallery-item"><img src="/assets/images/Art11.jpeg" alt="Croissants dorés">
+            <div class="content">
+                <h3> L’atelier du pain gourmand
+                </h3>
+                <p>Suivez la magie de la cuisson et repartez avec des muffins tout chauds.
+                </p>
+            </div>
+        </div>
+        <div class="gallery-item"><img src="/assets/images/Art13.jpeg" alt="Baguettes croustillantes">
+            <div class="content">
+                <h3>Le paradis des pains de campagne
+                </h3>
+                <p>Dégustez nos pains rustiques et authentiques, parfaits pour vos repas</p>
+            </div>
+        </div>
+        <div class="gallery-item"><img src="/assets/images/Art12.jpeg" alt="Viennoiseries variées">
+            <h3> Vitrine des délices sucrés et salés
+            </h3>
+            <p>Une explosion de couleurs et de saveurs pour les amateurs de bonnes choses.</p>
+        </div>
+    </section>
+    
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact-form">
+                <div class="form-title">
+
+                    <h3>Contactez-nous</h3>
+                </div>
+                <div class="form-group">
+
+                    <input type="text" placeholder="Votre Nom svp" name="Nom">
+                    <input type="email" placeholder="Votre Email svp" name="email" required>
+                    <input type="tel" placeholder="Votre Numéro svp" name="téléphone" required>
+                    <div class="contact-btn">
+                        <button type="submit">Envoyer</button>
+                        <button type="reset">Annuler</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-box">
+                    <h4>Téléphone</h4>
+                    <p>+509 40317399</p>
+                </div>
+                <div class="info-box">
+                    <h4>Email</h4>
+                    <p>wilnaderjean78@gmail.com</p>
+                </div>
+                <div class="info-box">
+                    <h4>Adresse</h4>
+                    <p>123 Ruelle D'Espoir, Anse-Á-Galets, Haïti</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>
+                &copy; 2024 Boulangerie Artisanale NSM. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+
+</body>
+
+</htmll>
