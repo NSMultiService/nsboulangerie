@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NS Boulangerie - Découvrez nos pains artisanaux, viennoiseries et pâtisseries fabriqués avec passion.">
+    <meta name="keywords" content="boulangerie, pain artisanal, pâtisseries, viennoiseries, NS Boulangerie">
+    <meta name="author" content="NS Boulangerie">
+    <title>Boulangerie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles.css">
+
+    
+</head>
+
+<body>
+
+    <header >
+        <!--HEADER-->
+        <button class="menu-toggle" id="menu-toggle">
+            ☰ <!-- Icône de menu hamburger -->
+        </button>
+
+
+        <div class="nav-bar" id="nav-bar">
+            <div class="navigation-logo">
+                <h1>NS.BOULANGRIE</h1>
+            </div>
+            <div class="navigation-menu" id="navigation-menu">
+                <ul class="menu">
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/produits.html">Produits</a></li>
+                    <li><a href="/galerie.html">Galerie</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/avis.html">Avis Clients</a></li>
+                </ul>
+            </div>
+            <div id="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div class="navigation-button">
+                <button onclick="window.location.href='produits.html'">Commandez maintenant</button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+    </header>
+    <section class="products-container">
+        <div id="cart-modal">
+            <h2>Votre Panier</h2>
+            <div id="cart-items"></div>
+            <button id="pay-button">Payer</button>
+            <button id="close-cart">Fermer</button>
+        </div>
+    
+    </section>
+
+
+    <main>
+
+        <div class="section-nav-service">
+            <h2>Le Pain, Notre Passion</h2>
+            <p>Découvrez l'art de la boulangerie artisanale avec des produits frais,
+                savoureux et faits avec amour. Votre palais nous remerciera !</p>
+        </div>
+
+    </main>
+    
+
+    <div class="container">
+        <section id="video">
+
+
+            <video src="/assets/videos/219804.mov" type="video/mp4" controls autoplay loop muted></video>
+
+        </section>
+        <!--NOUVEAU-->
+
+        <section class="nouveautes">
+            <h1>Nouveautés</h1>
+            <div class="cards">
+                <div class="card">
+                    <img src="/assets/images/Art1.png" alt="Pains du Monde">
+                    <div class="content">
+                        <h2>1 Décembre 2024</h2>
+                        <h3>Pains du Monde</h3>
+                        <p>Un tour du monde des pains ! Chaque semaine, un pain d’un pays différent. Qui a dit que le
+                            pain était ennuyeux ?</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/Art2.png" alt="Pain Magique">
+                    <div class="content">
+                        <h2>27 Décembre 2024</h2>
+                        <h3>Pain Magique</h3>
+                        <p>Découvrez notre nouveau pain qui fait des merveilles ! Il est si bon qu’il pourrait presque
+                            vous parler !</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/Art3.png" alt="Recette Secrète">
+                    <div class="content">
+                        <h2>20 Décembre 2024</h2>
+                        <h3>Recette Secrète</h3>
+                        <p>Un aperçu de notre recette secrète qui a été transmise de génération en génération. Spoiler :
+                            ça implique beaucoup de beurre !</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/Art4.png" alt="Pains Baguette">
+                    <div class="content">
+                        <h2>20 Décembre 2024</h2>
+                        <h3>Pains Baguette</h3>
+                        <p>Un aperçu de notre Pain baguette qui a été transmise de génération en génération.
+                            Pains allongé avec une croûtr croustillante.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/Art5.jpeg" alt="Pains aux Céréales">
+                    <div class="content">
+                        <h2>20 Décembre 2024</h2>
+                        <h3>Pains aux Céréales</h3>
+                        <p>Un aperçu de notre recette secrète du pain aux céréales: Enrichi de graines (tournesol, lin,
+                            sésame, etc.)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="avantage">
+            <h5>POURQUOI NOUS CHOISIR?</h5>
+            <p>Nous ne sommes pas juste une boulangerie, nous sommes une expérience ! Nos produits sont faits avec
+                amour, passion et un soupçon de magie. Chaque bouchée est une aventure gustative qui vous fera sourire !
+            </p>
+            <div class="cards-avantage">
+
+                <div class="card-avantage">
+                    <img src="/assets/images/Art17.jpeg" alt="produits frais">
+                    <div class="content">
+                        <h1>Produits Frais</h1>
+                        <p>Nos pains sont cuits tous les jours, juste pour vous. Qui peut résister à l'odeur du pain
+                            chaud ?</p>
+                    </div>
+                </div>
+                <div class="card-avantage">
+                    <img src="/assets/images/riche.jpeg" alt="Histoire Riche">
+                    <div class="content">
+                        <h1>Histoire Riche</h1>
+                        <p>Une tradition familiale qui remonte à des générations. Chaque pain raconte une histoire !
+                        </p>
+                    </div>
+                </div>
+                <div class="card-avantage">
+                    <img src="/assets/images/Equipe.jpeg" alt="Équipe Passionnée">
+                    <div class="content">
+                        <h1>Équipe Passionnée</h1>
+                        <p>
+                            Notre équipe est composée de boulangers fous de passion. Ils mettent tout leur cœur dans
+                            chaque création.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+
+    </div>
+
+    <div class="animation-text">
+        <div class="animation">
+
+            Le bonheur est juste un morceau de pain ! * Des saveurs qui vous feront danser ! *
+
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact-form">
+                <div class="form-title">
+
+                    <h3>Contactez-nous</h3>
+                </div>
+                <div class="form-group">
+
+                    <input type="text" placeholder="Votre Nom svp" name="Nom">
+                    <input type="email" placeholder="Votre Email svp" name="email" required>
+                    <input type="tel" placeholder="Votre Numéro svp" name="téléphone" required>
+
+                    <div class="contact-btn">
+                        <button type="submit">Envoyer</button>
+                        <button type="reset">Annuler</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-box">
+                    <h4>Téléphone</h4>
+                    <p>+509 40317399</p>
+                </div>
+                <div class="info-box">
+                    <h4>Email</h4>
+                    <p>wilnaderjean78@gmail.com</p>
+                </div>
+                <div class="info-box">
+                    <h4>Adresse</h4>
+                    <p>123 Ruelle D'Espoir, Anse-Á-Galets, Haïti</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>
+                &copy; 2024 Boulangerie Artisanale NSM. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

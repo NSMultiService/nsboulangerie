@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NS Boulangerie - Découvrez nos pains artisanaux, viennoiseries et pâtisseries fabriqués avec passion.">
+    <meta name="keywords" content="boulangerie, pain artisanal, pâtisseries, viennoiseries, NS Boulangerie">
+    <meta name="author" content="NS Boulangerie">
+    <title>boulangerie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <!--HEADER-->
+        <button class="menu-toggle" id="menu-toggle">
+            ☰ <!-- Icône de menu hamburger -->
+        </button>
+
+
+        <div class="nav-bar" id="nav-bar">
+            <div class="navigation-logo">
+                <h1>NS.BOULANGRIE</h1>
+            </div>
+            <div class="navigation-menu" id="navigation-menu">
+                <ul class="menu">
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/produits.html">Produits</a></li>
+                    <li><a href="/galerie.html">Galerie</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/avis.html">Avis Clients</a></li>
+                </ul>
+            </div>
+            <div id="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div class="navigation-button">
+                <button onclick="window.location.href='produits.html'">Commandez maintenant</button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+    </header>
+    <section class="products-container">
+        <div id="cart-modal">
+            <h2>Votre Panier</h2>
+            <div id="cart-items"></div>
+            <button id="pay-button">Payer</button>
+            <button id="close-cart">Fermer</button>
+        </div>
+
+    </section>
+
+    <div class="payment-container">
+        <h2>Effectuer le Paiement</h2>
+        <form id="payment-form">
+            <!-- Choix du mode de paiement -->
+            <div class="form-group">
+                <label for="payment-method">Mode de Paiement</label>
+                <select id="payment-method" required>
+                    <option value="">Sélectionnez une option</option>
+                    <option value="card">Carte Bancaire</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="moncash">Mon Cash</option>
+                </select>
+            </div>
+
+            <!-- Paiement par Carte Bancaire -->
+            <div id="card-payment" class="hidden">
+                <div class="form-group">
+                    <label for="card-name">Nom du Titulaire</label>
+                    <input type="text" id="card-name" placeholder="Entrez votre nom">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="card-number">Numéro de Carte</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="card-expiry">Date d'Expiration</label>
+                    <input type="text" id="card-expiry" placeholder="MM/AA">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="card-cvv">CVV</label>
+                    <input type="text" id="card-cvv" placeholder="123"> 
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <!-- Paiement via PayPal -->
+            <div id="paypal-payment" class="hidden">
+                <p style="text-align: center;">Vous serez redirigé vers PayPal pour finaliser votre paiement.</p>
+            </div>
+
+            <!-- Paiement via Mon Cash -->
+            <div id="moncash-payment" class="hidden">
+                <div class="form-group">
+                    <label for="moncash-name">Nom du Compte</label>
+                    <input type="text" id="moncash-name" placeholder="Entrez le nom du compte" required
+                        pattern="^[A-Za-zÀ-ÿ\s]+$" title="Seules les lettres sont autorisées.">
+                    <span class="error-message"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="moncash-phone">Numéro de Téléphone</label>
+                    <input type="text" id="moncash-phone" placeholder="Entrez le numéro de téléphone" required
+                        pattern="^\d{8,15}$" title="Entre 8 et 15 chiffres requis.">
+                    <span class="error-message"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="moncash-pin">PIN</label>
+                    <input type="password" id="moncash-pin" placeholder="Entrez votre PIN" required pattern="^\d{4}$"
+                        maxlength="4" title="4 chiffres requis.">
+                    <span class="error-message"></span>
+
+                </div>
+            </div>
+
+            <!-- Bouton Payer -->
+            <button type="submit" class="btn-pay">Payer Maintenant</button>
+        </form>
+    </div>
+
+    <script src="/payment.js"></script>
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
